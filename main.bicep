@@ -1,6 +1,3 @@
-
-// Lab 1: Storage account with valid name (<=24 chars, lowercase/digits)
-
 targetScope = 'resourceGroup'
 
 var baseName = 'st${uniqueString(resourceGroup().id)}'
