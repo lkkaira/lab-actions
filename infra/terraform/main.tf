@@ -33,7 +33,7 @@ resource "random_string" "suffix" {
   special = false
 }
 
-# Storage Account (public access enabled for simplicity)
+# Storage Account
 resource "azurerm_storage_account" "lab2_sa" {
   name                     = "shivanshlab2${random_string.suffix.result}"
   resource_group_name      = data.azurerm_resource_group.rg.name
@@ -44,7 +44,7 @@ resource "azurerm_storage_account" "lab2_sa" {
   min_tls_version                   = "TLS1_2"
   allow_nested_items_to_be_public   = false
 
-  # ✅ Enable public network access so Terraform can create resources without error
+  # Enable public network access
   public_network_access_enabled     = true
 
   # Optional network rules
