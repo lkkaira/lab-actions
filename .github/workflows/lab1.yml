@@ -28,5 +28,5 @@ jobs:
       - name: Deploy Bicep to RG
         uses: ./.github/actions/deploy-azure
         with:
-          resourceGroup: Shivansh_Dubey_RG
+          resourceGroup: Lalit_Kaira_RG
           templateFile: ./main.bicep
